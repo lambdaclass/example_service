@@ -10,7 +10,6 @@ def hello():
     host = os.environ.get("PREVIEW_HOST", "localhost")
     return (
         "<html><body>"
-        "<img src='https://media1.tenor.com/m/Z4Ks69TQz0wAAAAC/hacker-pepe.gif' alt='pepe hacker'/>"
         "<h1>Hello, World!</h1>"
         "<p>whats poppin</p>"
         f"<p>Branch: <code>{branch}</code></p>"
