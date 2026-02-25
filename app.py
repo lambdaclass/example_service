@@ -11,6 +11,7 @@ def hello():
     return (
         "<html><body>"
         "<h1>Hello, World!</h1>"
+        "<p>whats poppin</p>"
         f"<p>Branch: <code>{branch}</code></p>"
         f"<p>Host: <code>{host}</code></p>"
         "</body></html>"
