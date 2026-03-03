@@ -14,6 +14,8 @@ def hello():
         "<img src='https://graffitimundo.com/wp-content/uploads/2011/01/nestor-x-41-773x480.jpg'"
         " alt='Nestornauta' style='max-width: 480px; width: 100%;'>"
         "<h2>Soberanía tecnológica y nacional</h2>"
+        "<img src='https://i.imgflip.com/2/1h2u3g.jpg'"
+        " alt='Pepe Hacker' style='max-width: 300px; width: 100%;'>"
         f"<p>Branch: <code>{branch}</code></p>"
         f"<p>Host: <code>{host}</code></p>"
         "</body></html>"
