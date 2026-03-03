@@ -1,3 +1,4 @@
+import logging
 import os
 from flask import Flask
 
@@ -6,6 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    app.logger.error("Page visited")
     branch = os.environ.get("PREVIEW_BRANCH", "unknown")
     host = os.environ.get("PREVIEW_HOST", "localhost")
     return (
