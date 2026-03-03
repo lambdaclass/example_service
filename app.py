@@ -9,8 +9,11 @@ def hello():
     branch = os.environ.get("PREVIEW_BRANCH", "unknown")
     host = os.environ.get("PREVIEW_HOST", "localhost")
     return (
-        "<html><body>"
+        "<html><body style='text-align: center; font-family: sans-serif;'>"
         "<h1 style='color: red;'>CHAU</h1>"
+        "<img src='https://graffitimundo.com/wp-content/uploads/2011/01/nestor-x-41-773x480.jpg'"
+        " alt='Nestornauta' style='max-width: 480px; width: 100%;'>"
+        "<h2>Soberanía tecnológica y nacional</h2>"
         f"<p>Branch: <code>{branch}</code></p>"
         f"<p>Host: <code>{host}</code></p>"
         "</body></html>"
