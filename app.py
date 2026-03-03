@@ -11,15 +11,15 @@ def hello():
     return (
         "<html><body>"
         "<h1 style=\"color: red;\">CHAU</h1>"
+        "<img src=\"https://graffitimundo.com/wp-content/uploads/2011/01/nestor-x-41-773x480.jpg\""
+        " alt=\"Nestornauta\" style=\"max-width: 400px; display: block; margin: 20px auto;\">"
+        "<p style=\"text-align: center; font-size: 1.2em; font-weight: bold;\">"
+        "Soberan&iacute;a tecnol&oacute;gica y nacional: el futuro se construye con memoria, verdad y justicia.</p>"
         f"<p>Branch: <code>{branch}</code></p>"
         f"<p>Host: <code>{host}</code></p>"
         "</body></html>"
     )
 
-
-@app.route("/error")
-def error():
-    return "Internal Server Error", 500
 
 
 if __name__ == "__main__":
