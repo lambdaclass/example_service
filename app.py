@@ -10,7 +10,7 @@ def hello():
     host = os.environ.get("PREVIEW_HOST", "localhost")
     return (
         "<html><body>"
-        "<h1>Hello, World!</h1>"
+        "<h1>Hola, Mundo!</h1>"
         f"<p>Branch: <code>{branch}</code></p>"
         f"<p>Host: <code>{host}</code></p>"
         "</body></html>"
