@@ -1,4 +1,5 @@
 import os
+from datetime import datetime, timezone
 from flask import Flask
 
 app = Flask(__name__)
@@ -8,11 +9,13 @@ app = Flask(__name__)
 def hello():
     branch = os.environ.get("PREVIEW_BRANCH", "unknown")
     host = os.environ.get("PREVIEW_HOST", "localhost")
+    utc_time = datetime.now(timezone.utc).isoformat()
     return (
         "<html><body>"
         "<h1>Hello, World!</h1>"
         f"<p>Branch: <code>{branch}</code></p>"
         f"<p>Host: <code>{host}</code></p>"
+        f"<p>Time: <code>{utc_time}</code></p>"
         "</body></html>"
     )
 
