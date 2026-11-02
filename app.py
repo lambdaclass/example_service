@@ -4,6 +4,11 @@ from flask import Flask
 app = Flask(__name__)
 
 
+@app.route("/version")
+def version():
+    return {"version": "0.1.0"}, 200
+
+
 @app.route("/")
 def hello():
     branch = os.environ.get("PREVIEW_BRANCH", "unknown")
