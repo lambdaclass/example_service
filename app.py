@@ -1,12 +1,22 @@
 import os
+import subprocess
 from flask import Flask
 
 app = Flask(__name__)
 
 
+def _git_sha():
+    try:
+        return subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], cwd=os.path.dirname(os.path.abspath(__file__))
+        ).decode().strip()
+    except Exception:
+        return None
+
+
 @app.route("/version")
 def version():
-    return {"version": "0.1.0"}, 200
+    return {"version": "0.1.0", "sha": _git_sha()}, 200
 
 
 @app.route("/")
