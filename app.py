@@ -1,7 +1,10 @@
 import os
+import time
 from flask import Flask
 
 app = Flask(__name__)
+
+_start_time = time.time()
 
 
 @app.route("/")
@@ -15,6 +18,11 @@ def hello():
         f"<p>Host: <code>{host}</code></p>"
         "</body></html>"
     )
+
+
+@app.route("/uptime")
+def uptime():
+    return str(int(time.time() - _start_time)), 200, {"Content-Type": "text/plain"}
 
 
 if __name__ == "__main__":
