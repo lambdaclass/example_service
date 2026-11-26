@@ -173,6 +173,7 @@ in
     python3
     curl
     jq
+    tree
   ];
 
   system.stateVersion = "24.11";
