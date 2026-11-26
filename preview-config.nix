@@ -167,7 +167,6 @@ in
   # Required: expose meta to tekton before container boot, and inside the container.
   system.build.previewMeta = pkgs.writeText "preview-meta.json" (builtins.toJSON meta);
   environment.etc."preview-meta.json".text = builtins.toJSON meta;
-  environment.etc."host-passwd".text = builtins.readFile /etc/passwd;
 
   environment.systemPackages = with pkgs; [
     git
