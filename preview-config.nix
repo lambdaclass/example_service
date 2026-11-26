@@ -131,7 +131,7 @@ in
     description = "Example service Flask app (port 8000)";
     after    = [ "setup-example.service" ];
     requires = [ "setup-example.service" ];
-    path     = [ pkgs.bash pkgs.coreutils ];
+    path     = [ pkgs.bash pkgs.coreutils pkgs.git ];
     serviceConfig = {
       Type        = "simple";
       User        = "preview";
