@@ -13,6 +13,7 @@ def hello():
         "<h1>Hello, World!</h1>"
         f"<p>Branch: <code>{branch}</code></p>"
         f"<p>Host: <code>{host}</code></p>"
+        "<footer>Served by example_service</footer>"
         "</body></html>"
     )
 
